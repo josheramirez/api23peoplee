@@ -8,8 +8,9 @@ import org.springframework.data.domain.Pageable;
 import net.api.apiJava8.entity.Course;
 
 public interface ICoursesService {
+	public List<Course> findAllPag(Pageable pageable);
 	public List<Course> findAll();
-	void guardar(Course course);
-	void eliminar(int idCourse);
-	public Page<Course> findAllPag(Pageable pageable);
+	public Course findById(int id);
+	public void save(Course course);
+	public void delete(int idCourse);
 }
